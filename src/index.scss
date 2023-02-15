@@ -1,0 +1,119 @@
+* {
+}
+
+:root {
+  --char-color: brown;
+  --card-width: 350px;
+  --profile-diametre: 100px;
+  --card-border-radius: 5px;
+}
+
+body{
+  background-color: #F0A04B;
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  width: var(--card-width);
+  height: 600px;
+  background-color: rgb(233, 224, 206);
+  border: 0px solid brown;
+  border-radius: var(--card-border-radius);
+  box-shadow: 3px 3px  5px #AA5656;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  
+  & .top-photo-container{
+    width: var(--card-width);
+    height: 200px;
+    border-radius: 1%;
+    background-image: url("https://images.photowall.com/products/60794/desert-sand-1.jpg?h=699&q=85");
+    background-size: cover;
+    box-shadow: 0 1px 1px rgb(121, 121, 121);
+  }
+
+  & .profile-container {
+    width: var(--profile-diametre);
+    height: var(--profile-diametre);
+    border: 1px solid brown;
+    background-image: url("../src/assets/yo2.png");
+    background-size: contain;
+    border-radius: 50%;
+    
+    position: absolute;
+    margin-top: 110px;
+
+
+  }
+
+  & .main-container {
+    padding: 0 30px 0;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    & h1 {
+      margin-bottom: -18px;
+    }
+
+    & button {
+      padding: 10px;
+      width: 100px;
+      border: 2px solid var(--char-color);
+      border-radius: 50px;
+      color: var(--char-color);
+    }
+  }
+
+  & footer{
+    width: var(--card-width);
+    height: 60px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+
+    & .post-container {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid gray;
+      border-bottom-left-radius: var(--card-border-radius);
+
+    }
+
+    & .followers-container {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid gray;
+    }
+
+    & .following-container {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid gray;
+      border-bottom-right-radius: var(--card-border-radius);
+    }
+  }
+}
+
+footer>div{
+  background-color: rgba(255, 255, 255, 0.473);
+  box-shadow: 0px -1px 1px rgb(65, 64, 64);
+
+}
